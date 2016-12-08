@@ -8,16 +8,22 @@ class CntDecompressor(input_file: String){
   def decompressedFile = input_file + ".dcmps"
   
   def charCntDecompressor(input_file: String): String = {
-    //
+    //read string
     val input_string = scala.io.Source.fromFile(input_file).mkString.stripLineEnd
-    
-    //output string
-    var output = ""
-    
+        
     //initial the count
     var charCurrent = input_string.charAt(0)
     var cnt = 0
     val n = input_string.length - 1
+
+    //check format
+    val m = input_string matches "([a-z0-9A-z][0-9])+"
+    if (m == false){
+      throw new Exception("Format not match!")
+    }
+    
+    //output string
+    var output = ""
     
     for(i <- 0 to n by 2){
       charCurrent = input_string.charAt(i)

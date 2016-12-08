@@ -8,8 +8,14 @@ class CntCompressor (input_file: String){
   def compressedFile = input_file + ".cmps"
   
   def charCntCompressor(input_file: String): String = {
-    //
+    //read string
     val input_string = scala.io.Source.fromFile(input_file).mkString.stripLineEnd
+    
+    //check format
+    val m = input_string matches "[a-z0-9A-z]+"
+    if (m == false){
+      throw new Exception("Format not match!")
+    }
     
     //output string
     var output = ""
