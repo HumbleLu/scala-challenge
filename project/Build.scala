@@ -12,9 +12,9 @@ object Build extends Build {
     .settings(
       description := "Akka Action",
       version := "0.0.2",
-      homepage := Some(new URL("https://github.com/yangbajing/akka-action")),
+      homepage := Some(new URL("https://github.com/HumbleLu/scala-challenge")),
       organization := "me.yangbajing",
-      organizationHomepage := Some(new URL("https://github.com/yangbajing/akka-action")),
+      organizationHomepage := Some(new URL("https://github.com/HumbleLu/scala-challenge")),
       startYear := Some(2015),
       scalaVersion := "2.11.7",
       scalacOptions ++= Seq(
