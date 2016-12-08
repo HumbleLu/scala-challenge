@@ -1,6 +1,9 @@
 # scala-challenge
 
-This is a practice of making a web RESTful service with AKKA, this work is modified from yangbajing's excellent example [1]
+This is a practice of making a web RESTful service with AKKA, this work is modified from yangbajing's excellent example [1]. This toy project provides compressing and decompressing POST services that to user upload a log file and receive a compressed file, vice versa.
+
+The compressing algorithm is based on the count of consecutive characters, for example:
+aaaabbc => a4b2c1 
 
 ## Run the webservice
 ```{r, engine='bash', count_lines}
@@ -8,7 +11,7 @@ This is a practice of making a web RESTful service with AKKA, this work is modif
 ```
 
 ```{r, engine='bash', count_lines}
-runMain me.chienlu.akkaaction.restapi.App
+akka-action > runMain me.chienlu.akkaaction.restapi.App
 ```
 
 ## Test 
