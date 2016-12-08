@@ -1,4 +1,4 @@
-package me.yangbajing.akkaaction.restapi.compress
+package me.chienlu.akkaaction.restapi.compress
 
 import java.time.LocalDate
 
@@ -6,7 +6,7 @@ import java.io._
 
 import java.nio.file.{Paths, Files}
 
-import me.yangbajing.akkaaction.util.exception.{MeConflictMessage, MeNotFoundMessage}
+import me.chienlu.akkaaction.util.exception.{MeConflictMessage, MeNotFoundMessage}
 
 import compressor.CntCompressor
 
@@ -23,7 +23,7 @@ class CompressService() {
       throw MeConflictMessage(s"${compress.inputFile} not exsit")
 
     val compressed = new CntCompressor(compress.inputFile)
-    compressed.writeCompressedfile()
+    compressed.writeFile()
 
     compress
   }

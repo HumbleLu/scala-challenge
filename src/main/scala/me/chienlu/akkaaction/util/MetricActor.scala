@@ -1,4 +1,4 @@
-package me.yangbajing.akkaaction.util
+package me.chienlu.akkaaction.util
 
 import java.util.concurrent.atomic.AtomicInteger
 

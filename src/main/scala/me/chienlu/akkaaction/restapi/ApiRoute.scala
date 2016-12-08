@@ -1,12 +1,13 @@
-package me.yangbajing.akkaaction.restapi
+package me.chienlu.akkaaction.restapi
 
 import akka.http.scaladsl.model.{HttpEntity, StatusCodes}
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.ExceptionHandler
 import akka.stream.Materializer
 import com.typesafe.scalalogging.StrictLogging
-import me.yangbajing.akkaaction.restapi.compress.CompressRoute
-import me.yangbajing.akkaaction.util.exception.MessageException
+import me.chienlu.akkaaction.restapi.compress.CompressRoute
+import me.chienlu.akkaaction.restapi.decompress.DecompressRoute
+import me.chienlu.akkaaction.util.exception.MessageException
 import org.json4s.JsonAST.{JInt, JObject, JString}
 
 import scala.concurrent.ExecutionContextExecutor
@@ -24,7 +25,7 @@ object ApiRoute extends StrictLogging {
       }
     }
 
-  import me.yangbajing.akkaaction.util.JsonSupport._
+  import me.chienlu.akkaaction.util.JsonSupport._
 
   /**
    * 自定义异常处理
@@ -58,7 +59,8 @@ object ApiRoute extends StrictLogging {
     handleExceptions(customExceptionHandler) {
       pathPrefix("api") {
         healthCheck ~
-          CompressRoute(props)
+          CompressRoute(props) ~
+          DecompressRoute(props)
       }
     }
 

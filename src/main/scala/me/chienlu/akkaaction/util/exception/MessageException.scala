@@ -1,4 +1,4 @@
-package me.yangbajing.akkaaction.util.exception
+package me.chienlu.akkaaction.util.exception
 
 /**
  * Message Exception

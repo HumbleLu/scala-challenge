@@ -1,10 +1,10 @@
-package me.yangbajing.akkaaction.restapi
+package me.chienlu.akkaaction.restapi
 
 import java.nio.file.{Paths, Files}
 
 import akka.http.scaladsl.Http
 import com.typesafe.scalalogging.StrictLogging
-import me.yangbajing.akkaaction.util.Utils
+import me.chienlu.akkaaction.util.Utils
 
 import scala.util.{Failure, Success}
 
@@ -14,7 +14,7 @@ import scala.util.{Failure, Success}
  */
 object App extends StrictLogging {
 
-  import me.yangbajing.akkaaction.util.SystemUtils._
+  import me.chienlu.akkaaction.util.SystemUtils._
   import system.dispatcher
 
   def main(args: Array[String]): Unit = {

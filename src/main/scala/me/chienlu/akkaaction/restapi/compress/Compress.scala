@@ -1,4 +1,4 @@
-package me.yangbajing.akkaaction.restapi.compress
+package me.chienlu.akkaaction.restapi.compress
 
 import java.time.LocalDate
 

@@ -37,14 +37,15 @@ class CntCompressor (input_file: String){
         output += cnt
       }
     }
-    
     return output
   }
   
-  def writeCompressedfile(){
+  def writeFile(){
     val file = new File(compressedFile)
     val bw = new BufferedWriter(new FileWriter(file))
     bw.write(compressed)
     bw.close()
   }
+  
+
 }

@@ -1,4 +1,4 @@
-package me.yangbajing.akkaaction.util
+package me.chienlu.akkaaction.util
 
 import java.lang.management.ManagementFactory
 import java.nio.charset.Charset

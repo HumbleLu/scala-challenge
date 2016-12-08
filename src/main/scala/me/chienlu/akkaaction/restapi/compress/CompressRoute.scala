@@ -1,4 +1,4 @@
-package me.yangbajing.akkaaction.restapi.compress
+package me.chienlu.akkaaction.restapi.compress
 
 import akka.http.scaladsl.model.StatusCodes
 import akka.stream.Materializer
@@ -12,7 +12,7 @@ import scala.concurrent.ExecutionContextExecutor
 object CompressRoute {
 
   import akka.http.scaladsl.server.Directives._
-  import me.yangbajing.akkaaction.util.JsonSupport._
+  import me.chienlu.akkaaction.util.JsonSupport._
 
   def apply(props: CompressContextProps)(implicit ec: ExecutionContextExecutor, mat: Materializer) =
     pathPrefix("compress") {
