@@ -15,7 +15,7 @@ object Build extends Build {
       homepage := Some(new URL("https://github.com/HumbleLu/scala-challenge")),
       organization := "me.yangbajing",
       organizationHomepage := Some(new URL("https://github.com/HumbleLu/scala-challenge")),
-      startYear := Some(2015),
+      startYear := Some(2016),
       scalaVersion := "2.11.7",
       scalacOptions ++= Seq(
         "-encoding", "utf8",
