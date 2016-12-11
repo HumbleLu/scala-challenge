@@ -19,7 +19,7 @@ class CntDecompressor(input_file: String){
     //check format
     val m = input_string matches "([a-z0-9A-z][0-9])+"
     if (m == false){
-      throw new Exception("Format not match!")
+      throw new Exception("Format not match! Empty file:" + decompressedFile + " generated.")
     }
     
     //output string
