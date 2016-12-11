@@ -1,7 +1,7 @@
 enablePlugins(JavaAppPackaging)
 
-name := "akka-http-microservice"
-organization := "com.theiterators"
+name := "scala-challenge"
+organization := "lu.chien"
 version := "1.0"
 scalaVersion := "2.11.8"
 
