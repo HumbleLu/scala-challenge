@@ -14,7 +14,7 @@ class CntCompressor (input_file: String){
     //check format
     val m = input_string matches "[a-z0-9A-z]+"
     if (m == false){
-      throw new Exception("Format not match! Empty file:" + compressedFile + " generated.")
+      throw new Exception("Format not match!")
     }
     
     //output string
@@ -34,6 +34,7 @@ class CntCompressor (input_file: String){
       else{
         output += charPrev
         output += cnt
+        output += "-"
         charPrev = charCurrent
         cnt = 1
       }

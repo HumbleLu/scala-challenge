@@ -2,7 +2,7 @@
 
 This is a practice of implementing web RESTful microservice with AKKA, this work is modified from lukasz's excellent example (with MIT License) [1]. This toy project provides compressing and decompressing POST services that to user upload a log file and receive a compressed file, vice versa.
 
-The compressing algorithm is based on the count of consecutive characters, for example: aaaabbc => a4b2c1 The algorithm is implemented in /src/main/scala/compressor, the compression related package
+The compressing algorithm is based on the count of consecutive characters, for example: aaaabbc => a4-b2-c1 The algorithm is implemented in /src/main/scala/compressor, the compression related package
 
 [1] https://github.com/theiterators/akka-http-microservice
 
